@@ -11,7 +11,7 @@
 * Im IMG/B Folder
 
 **3. Resultate Overcommitment (CPU & RAM)**
-* Im IMG/B FOlder
+* Im IMG/B Folder
 
 **4. Erklärung Overcommitment (Zeitscheiben & Swap)**
 * **Theorie:** Theoretisch ermöglicht der Hypervisor CPU-Überbuchung durch **Zeitscheiben** (rasanter Wechsel der Rechenzeit zwischen Kernen). Bei RAM funktioniert das teilweise über **Swap** (Auslagerung auf Disk). 
