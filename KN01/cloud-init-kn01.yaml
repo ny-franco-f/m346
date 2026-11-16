@@ -1,0 +1,11 @@
+#cloud-config
+package_update: true
+packages:
+  - tree
+write_files:
+  - path: /home/ubuntu/begruessung.txt
+    content: |
+      Hallo, diese VM wurde zu 100% automatisiert mit cloud-init erstellt!
+runcmd:
+  - wget -O /usr/bin/neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+  - chmod +x /usr/bin/neofetch
