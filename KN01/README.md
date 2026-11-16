@@ -37,3 +37,11 @@ Da Ubuntu 26.04 das Paket `neofetch` aus den Standard-Repositories entfernt hat,
 Die Datei `cloud-init-kn01.yaml` wurde so angepasst, dass sie `neofetch` über `runcmd` direkt via `wget` aus dem offiziellen GitHub-Repository lädt und ausführbar macht. Die VM wird nun zu 100% fehlerfrei und automatisiert konfiguriert.
 
 - Screenshot im IMG/C Folder
+
+## D) Vergleich: Manuell vs. Automatisiert
+
+Die automatisierte Bereitstellung mit `cloud-init` (Teil C2) ist der manuellen Konfiguration massiv überlegen:
+
+1. **Zeit & Effizienz:** Das manuelle Warten, Einloggen und Eintippen von Befehlen (`apt install` etc.) kostet jedes Mal Minuten und Aufmerksamkeit. Mit `cloud-init` läuft die VM im Hintergrund in wenigen Sekunden komplett fehlerfrei hoch.
+2. **Fehleranfälligkeit:** Manuelle Tippfehler (wie z.B. bei Dateipfaden oder Paketnamen) sind ausgeschlossen.
+3. **Reproduzierbarkeit (Infrastructure as Code):** Die YAML-Datei dient als fixes Rezept. Ich kann die VM jederzeit löschen und exakt identisch wiederherstellen, oder die Datei mit dem Team teilen, sodass alle garantiert dieselbe Entwicklungsumgebung haben.
